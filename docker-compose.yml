@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  celery:
+    build: .
+    command: celery -A tasks worker -l info 
+    container_name: celery_con
+    volumes:
+      - .:/usr/src/app
+  python:
+    build: .
+    command: python main.py
+    volumes:
+      - .:/usr/src/app
+  redis:
+    image: "redis:alpine"
