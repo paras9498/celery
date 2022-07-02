@@ -2,7 +2,7 @@ name: Python application
 
 on:
   push:
-   branches: [ master ]
+   branches: [ celery_master ]
       
 jobs:
   build:
@@ -14,5 +14,5 @@ jobs:
     - name: Build & Push Image
       run: |
         echo "chheda9498" | docker login -u "paraschheda" --password-stdin
-        docker image build -t dab8106/gitaction:v1 .
-        docker push dab8106/gitaction:v1
+        docker image build -t First_git .
+        docker push First_git

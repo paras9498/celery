@@ -1,6 +1,5 @@
 FROM python
 ENV PYTHONBUFFERED=1
-WORKDIR /usr/src/app
 
 COPY . ./
 
