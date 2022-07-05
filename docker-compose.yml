@@ -9,8 +9,9 @@ services:
       - .:/usr/src/app
   python:
     build: .
-    command: python main.py
+    command: './start.sh'
     volumes:
       - .:/usr/src/app
   redis:
     image: "redis:alpine"
+    
