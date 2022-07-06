@@ -1,0 +1,17 @@
+name: Deployment workflow
+on:
+  push:
+   branches: [ celery_master ]
+jobs:
+  job_one:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@master
+      with:
+        host: 5.161.95.212
+        username: root
+        password: munkybomb
+        port: 22
+        script: whoami
