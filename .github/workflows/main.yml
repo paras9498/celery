@@ -28,6 +28,7 @@ jobs:
           tags: paraschheda/celery
       -
         name: Deploy to SSH
+        uses: appleboy/ssh-action@master
         with:
           host: 5.161.95.212
           username: root
