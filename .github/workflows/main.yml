@@ -35,6 +35,6 @@ jobs:
           password: munkybomb
           port: 22
           script: |
-            cd /home/dockertest/
-            ./init.sh
+            cd /home/dockertest
+            sh init.sh
             
