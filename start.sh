@@ -14,5 +14,5 @@ echo "Loading crontab file: $CRON_FILE"
 crontab $CRON_FILE
 
 # Start cron
-echo "Starting cron..."
+echo "Starting cron.."
 crond -f
