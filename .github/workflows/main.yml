@@ -10,6 +10,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v1
+      - name: Build & Push Image
+        run: |
+          echo "chheda9498" | docker login -u "paraschheda" --password-stdin
+          docker image build -t first_git .
+          docker push paraschheda/celery
       -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v2
