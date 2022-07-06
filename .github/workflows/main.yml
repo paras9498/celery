@@ -1,8 +1,8 @@
 name: Python application
+
 on:
   push:
-    branches:
-      - 'celery_master '
+   branches: [ celery_master ]
 
 jobs:
   docker:
