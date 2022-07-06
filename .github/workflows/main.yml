@@ -37,4 +37,7 @@ jobs:
         username: root
         password: munkybomb
         port: 22
-        script: docker pull paraschheda/celery:latest
+        
+        script:
+            docker pull paraschheda/celery:latest
+            docker image inspect paraschheda/celery:latest
