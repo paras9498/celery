@@ -27,7 +27,7 @@ jobs:
           push: true
           tags: paraschheda/celery
       -
-        name: Deploy to  SSH
+        name: Deploy to SSH
         with:
           host: 5.161.95.212
           username: root
