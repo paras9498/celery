@@ -26,18 +26,14 @@ jobs:
         with:
           push: true
           tags: paraschheda/celery
-  job_one:
-    name: Deploy
-    runs-on: ubuntu-latest
-    steps:
-    - name: executing remote ssh commands using password
-      uses: appleboy/ssh-action@master
-      with:
-        host: 5.161.95.212
-        username: root
-        password: munkybomb
-        port: 22
-        script: |
-          - run: docker pull paraschheda/celery:latest
-          - run: docker image inspect paraschheda/celery:latest
+      -
+        name: Deploy to  SSH
+        with:
+          host: 5.161.95.212
+          username: root
+          password: munkybomb
+          port: 22
+          script: |
+            cd /home/dockertest/
+            ./init.sh
             
